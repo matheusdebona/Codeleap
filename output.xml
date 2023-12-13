@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231213 15:57:01.960" rpa="false" schemaversion="4">
+<suite id="s1" name="Codeleap Tests" source="C:\Users\Matheus\Desktop\CodeLeap\Robot Test\Codeleap\codeleap_tests.robot">
+<test id="s1-t1" name="Test Case 1 - Matheus de Bona" line="8">
+<kw name="Open browser and maximize window" library="codeleap_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>options=${OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231213 15:57:02.165" level="INFO">Opening browser 'gc' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20231213 15:57:02.164" endtime="20231213 15:57:04.038"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231213 15:57:04.038" endtime="20231213 15:57:04.148"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:02.164" endtime="20231213 15:57:04.148"/>
+</kw>
+<kw name="Access the homepage" library="codeleap_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231213 15:57:04.149" level="INFO">Opening url 'http://localhost:3000'</msg>
+<status status="PASS" starttime="20231213 15:57:04.149" endtime="20231213 15:57:04.182"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${ENTER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:04.183" endtime="20231213 15:57:04.208"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:04.362" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:04.208" endtime="20231213 15:57:04.362"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:04.148" endtime="20231213 15:57:04.362"/>
+</kw>
+<kw name="Write the username &quot;Matheus de Bona&quot; in the field &quot;Username&quot;" library="codeleap_resources" sourcename="Write the username &quot;${USERNAME}&quot; in the field &quot;Username&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${FIELD_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:04.363" endtime="20231213 15:57:04.380"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${FIELD_USERNAME}</arg>
+<arg>text=${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:04.381" level="INFO">Typing text 'Matheus de Bona' into text field '//input[@placeholder='John doe']'.</msg>
+<status status="PASS" starttime="20231213 15:57:04.380" endtime="20231213 15:57:04.457"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:04.624" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:04.457" endtime="20231213 15:57:04.624"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:04.363" endtime="20231213 15:57:04.624"/>
+</kw>
+<kw name="Click on the button &quot;Enter&quot;" library="codeleap_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${ENTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:04.625" level="INFO">Clicking element '//button[@class='btn-fill btn-upper'][contains(.,'Enter')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:04.625" endtime="20231213 15:57:04.661"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:04.625" endtime="20231213 15:57:04.661"/>
+</kw>
+<kw name="Write the title &quot;Hello World! I'm John Doe!&quot; in the field &quot;Title&quot;" library="codeleap_resources" sourcename="Write the title &quot;${TITLE}&quot; in the field &quot;Title&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${FIELD_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:04.662" endtime="20231213 15:57:04.677"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${FIELD_TITLE}</arg>
+<arg>text=${TITLE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:04.678" level="INFO">Typing text 'Hello World! I'm John Doe!' into text field '//input[contains(@name,'title')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:04.677" endtime="20231213 15:57:04.752"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:04.662" endtime="20231213 15:57:04.752"/>
+</kw>
+<kw name="Write the content &quot;This is my first post!&quot; in the field &quot;Content&quot;" library="codeleap_resources" sourcename="Write the content &quot;${CONTENT}&quot; in the field &quot;Content&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${FIELD_CONTENT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:04.753" endtime="20231213 15:57:04.767"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${FIELD_CONTENT}</arg>
+<arg>text=${CONTENT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:04.768" level="INFO">Typing text 'This is my first post!' into text field '//textarea[contains(@name,'content')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:04.767" endtime="20231213 15:57:04.833"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:04.990" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:04.833" endtime="20231213 15:57:04.990"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:04.753" endtime="20231213 15:57:04.990"/>
+</kw>
+<kw name="Click on the button &quot;Create&quot;" library="codeleap_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${CREATE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:04.991" level="INFO">Clicking element '//button[@class='btn-fill btn-upper'][contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:04.991" endtime="20231213 15:57:05.044"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:04.991" endtime="20231213 15:57:05.044"/>
+</kw>
+<kw name="Verify if the page contains the text &quot;Hello World! I'm John Doe!&quot;" library="codeleap_resources" sourcename="Verify if the page contains the text &quot;${TEXT}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231213 15:57:05.045" endtime="20231213 15:57:05.054"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:05.239" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:05.054" endtime="20231213 15:57:05.240"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:05.044" endtime="20231213 15:57:05.240"/>
+</kw>
+<kw name="Write the title &quot;New post to be deleted&quot; in the field &quot;Title&quot;" library="codeleap_resources" sourcename="Write the title &quot;${TITLE}&quot; in the field &quot;Title&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${FIELD_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:05.240" endtime="20231213 15:57:05.253"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${FIELD_TITLE}</arg>
+<arg>text=${TITLE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:05.253" level="INFO">Typing text 'New post to be deleted' into text field '//input[contains(@name,'title')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:05.253" endtime="20231213 15:57:05.324"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:05.240" endtime="20231213 15:57:05.324"/>
+</kw>
+<kw name="Write the content &quot;Can I delete this?&quot; in the field &quot;Content&quot;" library="codeleap_resources" sourcename="Write the content &quot;${CONTENT}&quot; in the field &quot;Content&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${FIELD_CONTENT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:05.325" endtime="20231213 15:57:05.337"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${FIELD_CONTENT}</arg>
+<arg>text=${CONTENT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:05.337" level="INFO">Typing text 'Can I delete this?' into text field '//textarea[contains(@name,'content')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:05.337" endtime="20231213 15:57:05.407"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:05.564" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:05.407" endtime="20231213 15:57:05.564"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:05.325" endtime="20231213 15:57:05.564"/>
+</kw>
+<kw name="Click on the button &quot;Create&quot;" library="codeleap_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${CREATE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:05.566" level="INFO">Clicking element '//button[@class='btn-fill btn-upper'][contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:05.565" endtime="20231213 15:57:05.604"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:05.565" endtime="20231213 15:57:05.604"/>
+</kw>
+<kw name="Write the title &quot;Post 3&quot; in the field &quot;Title&quot;" library="codeleap_resources" sourcename="Write the title &quot;${TITLE}&quot; in the field &quot;Title&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${FIELD_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:05.605" endtime="20231213 15:57:05.617"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${FIELD_TITLE}</arg>
+<arg>text=${TITLE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:05.618" level="INFO">Typing text 'Post 3' into text field '//input[contains(@name,'title')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:05.617" endtime="20231213 15:57:05.675"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:05.605" endtime="20231213 15:57:05.675"/>
+</kw>
+<kw name="Write the content &quot;Update?&quot; in the field &quot;Content&quot;" library="codeleap_resources" sourcename="Write the content &quot;${CONTENT}&quot; in the field &quot;Content&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${FIELD_CONTENT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:05.675" endtime="20231213 15:57:05.688"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${FIELD_CONTENT}</arg>
+<arg>text=${CONTENT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:05.689" level="INFO">Typing text 'Update?' into text field '//textarea[contains(@name,'content')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:05.688" endtime="20231213 15:57:05.745"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:05.890" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:05.745" endtime="20231213 15:57:05.890"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:05.675" endtime="20231213 15:57:05.890"/>
+</kw>
+<kw name="Click on the button &quot;Create&quot;" library="codeleap_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${CREATE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:05.891" level="INFO">Clicking element '//button[@class='btn-fill btn-upper'][contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:05.891" endtime="20231213 15:57:05.919"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:05.891" endtime="20231213 15:57:05.919"/>
+</kw>
+<kw name="Verify if the page contains the text &quot;New post to be deleted&quot;" library="codeleap_resources" sourcename="Verify if the page contains the text &quot;${TEXT}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231213 15:57:05.919" endtime="20231213 15:57:05.928"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:06.083" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:05.928" endtime="20231213 15:57:06.083"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:05.919" endtime="20231213 15:57:06.083"/>
+</kw>
+<kw name="Verify if the page contains the text &quot;Update?&quot;" library="codeleap_resources" sourcename="Verify if the page contains the text &quot;${TEXT}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231213 15:57:06.084" endtime="20231213 15:57:06.093"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:06.249" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:06.093" endtime="20231213 15:57:06.250"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:06.084" endtime="20231213 15:57:06.250"/>
+</kw>
+<kw name="Edit post with title &quot;Post 3&quot;" library="codeleap_resources" sourcename="Edit post with title &quot;${TITLE}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//article[@class='postCard'][contains(.,'${TITLE}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:06.251" endtime="20231213 15:57:06.266"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=svg[aria-label='Edit your post ${TITLE}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:06.267" endtime="20231213 15:57:06.282"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=svg[aria-label='Edit your post ${TITLE}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:06.283" level="INFO">Clicking element 'css=svg[aria-label='Edit your post Post 3']'.</msg>
+<status status="PASS" starttime="20231213 15:57:06.282" endtime="20231213 15:57:06.316"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h2[contains(.,'Edit Item')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:06.316" endtime="20231213 15:57:06.330"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[contains(@value,'${TITLE}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:06.330" endtime="20231213 15:57:06.345"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:06.506" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:06.345" endtime="20231213 15:57:06.507"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:06.251" endtime="20231213 15:57:06.507"/>
+</kw>
+<kw name="Write new content &quot;ATUALIZOU&quot; in the field &quot;Content&quot; with old content &quot;Update?&quot;" library="codeleap_resources" sourcename="Write new content &quot;${NEW_CONTENT}&quot; in the field &quot;Content&quot; with old content &quot;${OLD_CONTENT}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//form[@class='standard-form'][contains(.,'TitleContent${OLD_CONTENT}Save')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:06.507" endtime="20231213 15:57:06.524"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${EDIT_SAVE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:06.525" level="INFO">Clicking element '//button[@class='btn-fill btn-upper'][contains(.,'Save')]'.</msg>
+<status status="PASS" starttime="20231213 15:57:06.525" endtime="20231213 15:57:06.557"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:06.507" endtime="20231213 15:57:06.558"/>
+</kw>
+<kw name="Verify if the page contains the text &quot;Update?&quot;" library="codeleap_resources" sourcename="Verify if the page contains the text &quot;${TEXT}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231213 15:57:06.558" endtime="20231213 15:57:06.564"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:06.732" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:06.564" endtime="20231213 15:57:06.732"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:06.558" endtime="20231213 15:57:06.732"/>
+</kw>
+<kw name="Delete post with title &quot;New post to be deleted&quot;" library="codeleap_resources" sourcename="Delete post with title &quot;${DELETE_TITLE}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=svg[aria-label='Delete your post ${DELETE_TITLE}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 15:57:06.733" endtime="20231213 15:57:06.747"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=svg[aria-label='Delete your post ${DELETE_TITLE}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 15:57:06.748" level="INFO">Clicking element 'css=svg[aria-label='Delete your post New post to be deleted']'.</msg>
+<status status="PASS" starttime="20231213 15:57:06.747" endtime="20231213 15:57:06.776"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>text=Are you sure you want to delete this item?</arg>
+<arg>action=accept</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20231213 15:57:06.776" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20231213 15:57:06.776" endtime="20231213 15:57:06.779"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:06.732" endtime="20231213 15:57:06.779"/>
+</kw>
+<kw name="Verify if the page dont contains the text &quot;New post to be deleted&quot;" library="codeleap_resources" sourcename="Verify if the page dont contains the text &quot;${TEXT}&quot;">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:06.939" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:06.780" endtime="20231213 15:57:06.939"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>text=${TEXT}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20231213 15:57:06.953" level="INFO">Current page does not contain text 'New post to be deleted'.</msg>
+<status status="PASS" starttime="20231213 15:57:06.939" endtime="20231213 15:57:06.953"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:06.779" endtime="20231213 15:57:06.953"/>
+</kw>
+<kw name="Close browser and quit" library="codeleap_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 15:57:07.145" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 15:57:06.954" endtime="20231213 15:57:07.145"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231213 15:57:07.146" endtime="20231213 15:57:09.250"/>
+</kw>
+<status status="PASS" starttime="20231213 15:57:06.953" endtime="20231213 15:57:09.250"/>
+</kw>
+<doc>Sign in with Matheus de Bona</doc>
+<tag>Matheus de Bona</tag>
+<status status="PASS" starttime="20231213 15:57:02.164" endtime="20231213 15:57:09.250"/>
+</test>
+<doc>This is a test for the CodeLeap Network</doc>
+<status status="PASS" starttime="20231213 15:57:01.962" endtime="20231213 15:57:09.251"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Matheus de Bona</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Codeleap Tests">Codeleap Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
